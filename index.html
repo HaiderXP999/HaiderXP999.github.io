@@ -1,78 +1,29 @@
 
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Haider XP Login</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background: linear-gradient(to right, #232526, #414345);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            color: white;
-        }
-        .login-container {
-            background: #2c3e50;
-            padding: 30px;
-            border-radius: 15px;
-            box-shadow: 0px 0px 10px 0px #000;
-            width: 90%;
-            max-width: 400px;
-        }
-        h2 {
-            text-align: center;
-            margin-bottom: 25px;
-        }
-        input[type="text"], input[type="password"] {
-            width: 100%;
-            padding: 12px;
-            margin: 8px 0 16px 0;
-            border: none;
-            border-radius: 8px;
-        }
-        button {
-            width: 100%;
-            background-color: #1abc9c;
-            color: white;
-            padding: 12px;
-            border: none;
-            border-radius: 8px;
-            font-size: 16px;
-            cursor: pointer;
-        }
-        button:hover {
-            background-color: #16a085;
-        }
-        .message {
-            margin-top: 15px;
-            text-align: center;
-            color: #f1c40f;
-        }
-    </style>
-    <script>
-        function login() {
-            var user = document.getElementById("username").value;
-            var pass = document.getElementById("password").value;
-            if(user === "admin" && pass === "1234") {
-                window.location.href = "dashboard.html";
-            } else {
-                document.getElementById("msg").innerText = "Invalid login. Try admin / 1234.";
-            }
-        }
-    </script>
+  <title>Haider XP Login</title>
+  <style>
+    body { background: #111; color: white; font-family: Arial; text-align: center; padding-top: 100px; }
+    input { padding: 10px; margin: 10px; width: 200px; }
+    button { padding: 10px 20px; }
+  </style>
+  <script>
+    function login() {
+      var user = document.getElementById("username").value;
+      var pass = document.getElementById("password").value;
+      if (user === "admin" && pass === "1234") {
+        window.location.href = "dashboard.html";
+      } else {
+        alert("Invalid login");
+      }
+    }
+  </script>
 </head>
 <body>
-    <div class="login-container">
-        <h2>Haider XP Login</h2>
-        <input type="text" id="username" placeholder="Username" />
-        <input type="password" id="password" placeholder="Password" />
-        <button onclick="login()">Login</button>
-        <div class="message" id="msg"></div>
-    </div>
+  <h1>Welcome to Haider XP</h1>
+  <input type="text" id="username" placeholder="Username"><br>
+  <input type="password" id="password" placeholder="Password"><br>
+  <button onclick="login()">Login</button>
 </body>
 </html>

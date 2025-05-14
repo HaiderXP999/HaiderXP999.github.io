@@ -1,0 +1,19 @@
+
+<!DOCTYPE html>
+<html>
+<head><title>Clone Expiry</title></head>
+<body>
+  <h1>Clone Expiry System</h1>
+  <p>This access will expire in <span id="countdown">10</span> seconds.</p>
+  <script>
+    let seconds = 10;
+    setInterval(() => {
+      seconds--;
+      document.getElementById("countdown").innerText = seconds;
+      if (seconds === 0) {
+        alert("Access expired!");
+      }
+    }, 1000);
+  </script>
+</body>
+</html>
